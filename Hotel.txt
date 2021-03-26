@@ -1,0 +1,111 @@
+import * as ReactBootStrap from "react-bootstrap";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Card } from "react-bootstrap";
+import trident from './img/Trident.jpg';
+import "./App.css";
+import Carousel from 'react-bootstrap/Carousel';
+
+const HotelAll = () => {
+  const [guidebook, setguidebook] = useState([]);
+/*
+  useEffect(() => {
+    postDatatoServer(guidebook);
+  }, []);
+
+  const postDatatoServer = (data) => {
+    axios.post(`http://localhost:8080/user/readallguide`).then(
+      (response) => {
+        console.log(response.data);
+        setguidebook(response.data);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  };
+*/
+  const card = [
+    {
+      image: "./img/download.png",
+      hotel_id: "001",
+      hotel_name: "Hotel Suniti",
+      hotel_address: "Jaipur,Rajasthan,India",
+    },
+    {
+      image: "./img/download.png",
+      hotel_id: "002",
+      hotel_name: "Hotel Pranav",
+      hotel_address: "Pune,Maharashtra,India",
+    },
+    {
+      image: "./img/download.png",
+      hotel_id: "003",
+      hotel_name: "Hotel Vaibhav",
+      hotel_address: "Pune,Maharashtra,India",
+    },
+    {
+      image: "./img/download.png",
+      hotel_id: "004",
+      hotel_name: "Hotel Rushikesh",
+      hotel_address: "Pune,Maharashtra,India",
+    },
+  ];
+
+  const renderCard = (card, index) => {
+    return (
+
+
+    
+<div>
+    <div className="row mt-3" >
+
+
+              <div className="col-8 shadow align-items-center justify-content-center m-0 p-0" style={{display:"contents", color:"DarkSlateGrey", fontWeight:"600"}}>
+             
+                  <div className="col-8 pt-4" style={{paddingLeft:"100px"}}>
+                      <h5 style={{fontWeight:"700"}}>{card.hotel_name}</h5> 
+                      🏬 Hotel Id: {card.hotel_id} <br/>
+                      📍 Address: {card.hotel_address}<br/><br/>
+
+                      <button type="button" class="btn btn-outline-warning">Booking is Available</button>
+
+                      <br/>  <br/>
+                <hr/>
+                  </div>
+
+                 
+
+                  <div className="col-4" >
+
+                        <div className="col-12 d-flex justify-content-center" style={{width:"150", paddingRight:"100px"}}>
+                            <Carousel className="carousel">
+                              <Carousel.Item interval={1000}>
+                                <img className="d-block w-150" src={trident} alt="First slide" style={{width:"auto",height:"200px"}}/><img/>
+                              
+                              </Carousel.Item>
+
+                              <Carousel.Item interval={500}>
+                                <img className="d-block w-150" src={trident} alt="Third slide" style={{width:"auto",height:"200px"}}/><img/>
+                              </Carousel.Item>
+
+                              <Carousel.Item interval={500}>
+                                <img className="d-block w-150" src={trident} alt="Third slide" style={{width:"auto",height:"200px"}}/><img/>
+                              </Carousel.Item>
+                            </Carousel>
+                </div>  
+              </div>      
+                  </div>
+            </div>
+
+   </div>
+
+    );
+  };
+
+  return <div className="grid">{card.map(renderCard)}</div>;
+};
+
+
+
+export default HotelAll;

@@ -1,0 +1,57 @@
+footer{
+    background:rgb(240, 250, 249);
+    color:#34393d;
+    padding: 2rem 0 3rem;
+    margin-top: 0rem;
+  }
+  
+  footer img{
+    height: 3rem;
+    margin: 1.5rem 0;
+  }
+  
+  footer a{
+    color: white;
+  
+  }
+  
+  footer svg.svg-inline--fa{
+    font-size: 1.6rem;
+    margin: 1.2rem .5rem 0 0;
+  }
+  
+  footer svg.svg-inline--fa:hover{
+    color: #1ebba3;
+  }
+  
+  
+  
+  
+  input[type=text],input[type=email],input[type=number]{
+    width: 70%;
+    padding: 5px 22px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    border:2px solid #58B19F;
+  }
+  
+  textarea{
+    width: 70%;
+    height:50px;
+    padding: 15px 22px;
+    box-sizing: border-box;
+    border:2px solid #58B19F;
+    border-radius: 2px;
+    resize: none;
+  }
+  
+  button[type=submit]{
+    background-color: #8842d5;
+    border: none;
+    color: white;
+    padding: 8px 36px;
+    text-decoration: none;
+    border: 2px solid #ccc;
+    margin: 5px 4px;
+    cursor: pointer;
+  }

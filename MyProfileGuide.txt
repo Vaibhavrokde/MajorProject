@@ -1,0 +1,72 @@
+
+const MyProfile = ()=>{
+    const [guidebook,setguidebook]= useState([]);
+
+
+    useEffect(()=>{
+        postDatatoServer(guidebook);
+    },[]);
+
+    const postDatatoServer= (data)=> {
+        axios.post(`http://localhost:8080/user/readallguide`).then(
+          (response)=>{
+            console.log(response.data);
+            setguidebook(response.data);
+          },(error)=>{
+            console.log(error);
+          } 
+    
+        )
+      }
+    
+      const renderCard = (card, index) => {
+        return (
+          <Card  key={index}>
+             <Card.Body>
+            <Card.Title>Reg_No:{card.guide_id}</Card.Title>
+           
+            <Card.Text>Name:{card.guide_name}</Card.Text>
+            <Card.Text>Name:{card.guide_username}</Card.Text>
+              <Card.Text>Email:{card.guide_email}</Card.Text>
+             
+              <Card.Text>Licence No:{card.licence_no}</Card.Text>
+              <Card.Text>Mobile:{card.mobile_no}</Card.Text>
+            </Card.Body>
+          </Card>
+        );
+      };
+    
+      return <div className="grid">{guidebook.map(renderCard)}</div>;
+}
+export default MyProfile;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

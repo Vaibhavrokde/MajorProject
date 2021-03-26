@@ -1,0 +1,244 @@
+/* @import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+.jai-res{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+ 
+} */
+
+body{
+  background: rgb(240, 250, 249);
+}
+
+.img-responsive{
+  width:95%;
+  height:95%;
+}
+
+.guide-image {
+  border-radius: 50%;
+  background:grey;
+  height:45%;
+  
+  } 
+  .guide-text{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .card-img-top:hover {
+
+    transform: scale(1.1) rotate(
+  2deg
+  );
+  
+  transition: 0.2s;
+  }
+
+
+.footer__area {
+  margin-top: 100px;
+  padding: 100px 0;
+  background: #40474e;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4ddb4', endColorstr='#002400',GradientType=1 );
+  color: black;
+  position: relative;
+}
+
+.main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.single__footer {
+  width: 230px;
+}
+.single__footer:first-child {
+  width: 400px;
+}
+.single__footer h4 {
+  text-transform: capitalize;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.footer__social a {
+  color: black;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.footer__social {
+  margin-top: 20px;
+}
+.single__footer ul {
+  list-style: none;
+}
+.single__footer ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+.single__footer ul li a {
+  color: black;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.single__footer ul li a i {
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.copy {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 50px;
+}
+.footer__wave__box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 50px;
+  overflow: hidden;
+}
+.footer__wave {
+  /* background-image: url("./img/footer-shape.png");*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 80%;
+  width: 200%;
+  background-size: 50%;
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+.footer__animation {
+  animation: footer_wave 3s linear infinite;
+  left: auto;
+  right: 0;
+}
+
+@keyframes footer_wave {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(25%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    width: 320px;
+  }
+  .footer__wave__box {
+    display: none;
+  }
+  .single__footer:first-child,
+  .single__footer {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.Form-group{
+  background-color: grey;
+}
+
+
+.calendar {
+  --weekend: rgba(0, 0, 0, 0);
+  --date-light: #f8f9fa;
+  --date-primary: #5644c1;
+  --date-success: #37d37d;
+  --date-primaryLight: #eceaf5;
+  --date-primaryTitle: #dbd8f0;
+  --date-hover: #262769;
+  --date-highlight: #f83854;
+  --date-disabled:#c2c1cc;
+  --date-width: 260px;
+  --date-height: 280px;
+}
+
+/* input[type=date]{
+  width:165px;
+
+} */
+
+ input[type=number]{
+  width: 100%;
+  padding: 7px 6px;
+  margin: 8px 0; 
+  /* display: inline-block; */
+  /* border: 1px solid #ccc; */
+   border-radius: 3px;
+  /* box-sizing: border-box; */
+} 
+
+/* input[type=date]{
+  width: 100%;
+  padding: 10px 10px;
+  margin: 8px 0; */
+  /* display: inline-block; */
+  /* border: 1px solid #ccc; */
+  /* border-radius: 4px;
+  box-sizing: border-box;
+} */
+
+/* .calendar{
+  padding: 13px 13px;
+  margin: 8px 0;
+} */
+
+
+
+
+/* ===========================things to do===================================================== */
+
+.img-responsive1{
+  width:105%;
+  height:60%;
+
+}
+
+.img-responsive2{
+  width:105%;
+  height:90%;
+
+}
+
+/* =========================================================================================================== */
+.guide-image {
+  border-radius:10%;
+  background:grey;
+  width:30% ;
+  height:60%;
+  
+  }
+
+
+
+  .p1{
+    border:2px solid #58B19F;
+    width:70%;
+  }
+
+
+
+

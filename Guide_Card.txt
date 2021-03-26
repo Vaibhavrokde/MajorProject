@@ -1,0 +1,112 @@
+import React from "react";
+import * as ReactBootStrap from "react-bootstrap";
+import { useEffect, useState } from "react";
+//import axios from "axios";
+import { Card } from "react-bootstrap";
+import Carousel from "react-bootstrap/Carousel";
+
+const Allguide = () => {
+  const [guidebook, setguidebook] = useState([]);
+
+   useEffect(() => {
+      postDatatoServer(guidebook);
+    }, []);
+  
+    const postDatatoServer = (data) => {
+      axios.post(`http://localhost:8080/user/readallguide`).then(
+        (response) => {
+          console.log(response.data);
+          setguidebook(response.data);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    };
+
+  /*const card = [
+    {
+      image: "./img/dumy.jpg",
+      guide_id: "001",
+      guide_name: "Suniti Jha",
+      guide_email: "suniti@gmail.com",
+      licence_no: "123456",
+      mobile_no: "7580758898",
+    },
+    {
+      image: "./img/dumy.jpg",
+      guide_id: "002",
+      guide_name: "Suniti Jha",
+      guide_email: "suniti@gmail.com",
+      licence_no: "123456",
+      mobile_no: "7580758898",
+    },
+    {
+      image: "./img/dumy.jpg",
+      guide_id: "003",
+      guide_name: "Suniti Jha",
+      guide_email: "suniti@gmail.com",
+      licence_no: "123456",
+      mobile_no: "7580758898",
+    },
+    {
+      image: "./img/dumy.jpg",
+      guide_id: "004",
+      guide_name: "Suniti Jha",
+      guide_email: "suniti@gmail.com",
+      licence_no: "123456",
+      mobile_no: "7580758898",
+    },
+  ];*/
+
+  const renderCard = (card, index) => {
+    return (
+      <div>
+        //{" "}
+        <div className="product">
+          {/* ====================================================================================================== */}
+          <div class="container-fluid">
+            <div>
+              {/* ========================================================================== */}
+              <div></div>
+              {/* ==================================guide1========================================================= */}
+              <div>
+                {/* <div class="container-fluid"> */}
+                <div class="row shadow mt-5">
+                  <div>
+                    <Card.Img
+                      variant="top"
+                      src="holder.js/100px180"
+                      src={card.image}
+                    />
+                  </div>
+                  <div class="col-9 guide-text">
+                    <h4>Guide_Id:={card.guide_id}</h4>
+                    <h6>
+                      <i>Name:={card.guide_name}</i>
+                    </h6>
+                    <hr />
+                    <br />
+                    <h5>
+                      <b>Email:={card.guide_email}</b>
+                    </h5>
+                    <h6>
+                      <b></b> Licence_No:={card.licence_no}
+                    </h6>
+                    <h6>
+                      <b></b>Mobile_No:= {card.mobile_no}
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              {/* ==============================map function============================================================================== */}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  return <div>{guidebook.map(renderCard)}</div>;
+};
+export default Allguide;

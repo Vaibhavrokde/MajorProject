@@ -1,0 +1,31 @@
+import "./App.css";
+import React from "react";
+import { Card } from "react-bootstrap";
+
+const App = () => {
+  const cardInfo = [
+    {
+      registration_id: "001",
+      username: "Suniti Jha",
+      email: "suniti@gmail.com",
+      mobile: "7580758898",
+    },
+  ];
+
+  const renderCard = (card, index) => {
+    return (
+      <Card style={{ width: "18rem" }} key={index}>
+        <Card.Title>Reg_No:={card.registration_id}</Card.Title>
+        <Card.Body>
+          <Card.Text>Name:={card.username}</Card.Text>
+          <Card.Text>Email:={card.email}</Card.Text>
+          <Card.Text>Mobile:={card.mobile}</Card.Text>
+        </Card.Body>
+      </Card>
+    );
+  };
+
+  return <div className="grid">{cardInfo.map(renderCard)}</div>;
+};
+
+export default App;
