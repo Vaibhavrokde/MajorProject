@@ -50,6 +50,7 @@ const GuideBookingByGuide = () => {
             <th>Tourist Name</th>
             <th>From Date</th>
             <th>To Date</th>
+            <th>Actions</th>
             
           </tr>
         </thead>

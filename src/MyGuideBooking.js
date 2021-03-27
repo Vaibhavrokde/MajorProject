@@ -48,6 +48,7 @@ const MyGuideBooking = () => {
             <th>Guide Name</th>
             <th>From Date</th>
             <th>To Date</th>
+            <th>Actions</th>
             
           </tr>
         </thead>
