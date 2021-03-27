@@ -40,7 +40,7 @@ export default function header() {
 
           <li>
             {" "}
-              <Link to='Mybookings'><b>My Bookings</b></Link>
+              <Link to='HotelBookingByHotel'><b>My Bookings</b></Link>
           </li>
           
           <li>

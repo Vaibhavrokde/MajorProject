@@ -102,7 +102,9 @@ export default function Header() {
           <DropdownButton title={localStorage.getItem("CurrentSession") && JSON.parse(localStorage.getItem("CurrentSession")).username} id="dropdown-menu-align-right" class="dropdown bg-grey">
             <Dropdown.Item><Link to='TouristProfile'>My Profile</Link></Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item><Link to='Mybookings'>My Bookings</Link></Dropdown.Item>
+            <Dropdown.Item><Link to='MyGuideBooking'>My Guide Booking</Link></Dropdown.Item>
+            <Dropdown.Divider />
+            <Dropdown.Item><Link to='MyHotelBooking'>My Hotel Booking</Link></Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item> <Link onClick={logout} ><b>Logout</b></Link></Dropdown.Item>
       </DropdownButton>
@@ -126,7 +128,7 @@ export default function Header() {
           <DropdownButton title={localStorage.getItem("CurrentSession") && JSON.parse(localStorage.getItem("CurrentSession")).username} id="dropdown-menu-align-right" class="dropdown bg-grey">
             <Dropdown.Item><Link to='HotelProfile'>My Profile</Link></Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item><Link to='Mybookings'>My Bookings</Link></Dropdown.Item>
+            <Dropdown.Item><Link to='AllGuideBookings'>My Bookings</Link></Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item> <Link onClick={logout} ><b>Logout</b></Link></Dropdown.Item>
       </DropdownButton>
