@@ -41,7 +41,7 @@ export default function Headerguide() {
 
           <li>
             {" "}
-              <Link to='Mybookings'><b>My Bookings</b></Link>
+              <Link to='GuideBookingByGuide'><b>My Bookings</b></Link>
           </li>
 
           <li>

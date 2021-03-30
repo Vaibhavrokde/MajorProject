@@ -6,7 +6,48 @@ body {
     float: left;
     text-align: center;
     background-color: #40474e;
+   
   }
+  .navbar-brand{
+    color: white !important;
+    font-size:40px;
+    font-family: cambria;
+  }
+  .navbar-brand:hover{
+    color: #38dee4!important;
+
+  }
+
+  .nav-link, dropdown{
+    color: white!important;
+    font-size: 20px;
+    font-family: cambria;
+
+
+  }
+
+  .hr-auto{
+    margin-right: 10%;
+  }
+
+  
+
+  .nav-link:hover, dropdown{
+   color: #38dee4!important;
+  }
+
+  .dropdown-toggle{
+    color: white!important;
+    font-size: 20px!important;
+    font-family: cambria!important;
+  }
+
+
+
+
+
+
+
   #dropdown-menu-align-right{
   background-color: #40474e;
   color:black;

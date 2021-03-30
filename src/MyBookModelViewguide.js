@@ -6,6 +6,8 @@ import {useHistory} from 'react-router-dom';
 import Moment from "moment";
 import DatePicker from "react-date-picker";
 
+
+
 function Modelviewhotel(props) {
 
   let history= useHistory();

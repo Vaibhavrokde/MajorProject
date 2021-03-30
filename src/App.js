@@ -32,6 +32,11 @@ import MainHeader from "./MainHeader";
 import AllhotelAdmin from './AllhotelAdmin';
 import AllguideAdmin from './AllguideAdmin';
 import AlltouristAdmin from './AlltouristAdmin';
+import MyGuideBooking from './MyGuideBooking'
+import MyHotelBooking from './MyHotelBooking';
+import GuideBookingByGuide from './GuideBookingByGuide';
+import HotelBookingByHotel from './HotelBookingByHotel';
+import Header1 from './Header1';
 
 function App({handleLogged}) {
   return (
@@ -40,7 +45,8 @@ function App({handleLogged}) {
    <div>
 <Router>
 
-<MainHeader />
+ <MainHeader /> 
+{/* <Header1 /> */}
 <Switch>
 
       <Route exact path="/">
@@ -80,6 +86,21 @@ function App({handleLogged}) {
           </Route>
           <Route path="/AlltouristAdmin">
             <AlltouristAdmin />
+          </Route>
+
+          <Route path="/MyGuideBooking">
+            <MyGuideBooking />
+          </Route>
+          <Route path="/MyHotelBooking">
+            <MyHotelBooking />
+          </Route>
+
+          <Route path="/GuideBookingByGuide">
+            <GuideBookingByGuide />
+          </Route>
+
+          <Route path="/HotelBookingByHotel">
+            <HotelBookingByHotel />
           </Route>
 
           <Route path="/Allhotel">
@@ -129,6 +150,11 @@ function App({handleLogged}) {
              <Route path="/logout">
               <Logout />
           </Route>
+
+
+          <Route path="/MainHeader">
+              <Header1 />
+          </Route> 
   
        </Switch>
        <Footer />

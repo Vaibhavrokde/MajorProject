@@ -1,8 +1,9 @@
 import axios from "axios";
-import React, { useState} from "react";
+import React, { useCallback, useState} from "react";
 import { Button, Modal } from "react-bootstrap";
 import swal from "sweetalert";
 import {useHistory} from 'react-router-dom';
+import date from 'react-date-picker';
 import Moment from "moment";
 import DatePicker from "react-date-picker";
 
@@ -17,7 +18,7 @@ function Modelviewguide(props) {
     tourist_id : (localStorage.getItem("CurrentSession") && JSON.parse(localStorage.getItem("CurrentSession")).registration_id ) ,
     tourist_name : (localStorage.getItem("CurrentSession") && JSON.parse(localStorage.getItem("CurrentSession")).name ) ,
    
-    reg_date: Moment(new Date()).format("YYYY-MM-DD"),
+    reg_date: new Date().getFullYear() + '-0' + (new Date().getMonth() + 1) + '-' + new Date().getDate(),
     to_date:"",
     from_date:"",
     
@@ -27,7 +28,16 @@ function Modelviewguide(props) {
   const handleShow = () => setShow(true);
   // const handleStatus = (e) => setStatus(e.target.value);
 
-const handleForm =()=>{
+const handleForm =useCallback(()=>{
+  Validation();
+},[booking]);
+
+const Validation= useCallback( ()=>{
+
+  // console.log(booking.reg_date <= booking.from_date  );
+  // console.log(booking.reg_date <= booking.to_date  );
+  // console.log(booking.from_date <= booking.to_date  );
+  // console.log(booking);
 
   if ( localStorage.getItem("CurrentSession")===null) 
   {
@@ -38,12 +48,15 @@ const handleForm =()=>{
     history.push("/login");
     window.location.reload();
    
-  }else{
+  }  else if(booking.reg_date <= booking.from_date && booking.reg_date <= booking.to_date &&  booking.from_date <= booking.to_date){
+    swal("Success", "Booking Complete Successfully", "success");
     console.log(booking);
-    PostDataonServer(booking);
+     PostDataonServer(booking);
+  }else{
+    swal("!!", "Please Select Apropriate Booking Dates", "error");
   }
-   
-}
+  
+},[booking]);
 
   const PostDataonServer = (data) => {
 
@@ -54,7 +67,7 @@ const handleForm =()=>{
           swal("Success", "Booking Done Successfully", "success");
          }else{
            handleClose();
-          swal("Success", "GUide is not available at this hour", "success");
+          swal("Error", "GUide is not available at this hour", "error");
          }
       })
       .catch((err) => {
@@ -80,15 +93,12 @@ const handleForm =()=>{
                     <div className="col-12 shadow mt-3 " style={{backgroundColor: '#c0ded9', fontWeight: 'bold'}}>
                       <br/>
                     <form className="form ml-3 mr-3  "> 
+                           
+                            
                             <div className="row">
-                            <label for="date"> Registration Date : </label>
-                            <input type="date" class="form-control  border-dark calendar " name="date" id="date" onChange={(e)=>{setBooking({...booking, reg_date: e.target.value});}} required  placeholder="From" />
-                            </div>
-                            <br/> 
-                          
                             <label for="date"> Select Date(From): </label>
                             <input type="date" class="form-control  border-dark calendar " name="date" id="date" onChange={(e)=>{setBooking({...booking, from_date: e.target.value});}} required  placeholder="From" />
-                        
+                            </div>
                            
                             <br/>
                             <div className="row">

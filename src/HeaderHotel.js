@@ -6,7 +6,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import "./Header.css";
 
 import { NavDropdown, Nav,Navbar} from "react-bootstrap";
-export default function header() {
+export default function HeaderHotel() {
   const history= useHistory();
   let logout=()=>{
 
@@ -40,7 +40,7 @@ export default function header() {
 
           <li>
             {" "}
-              <Link to='Mybookings'><b>My Bookings</b></Link>
+              <Link to='HotelBookingByHotel'><b>My Bookings</b></Link>
           </li>
           
           <li>

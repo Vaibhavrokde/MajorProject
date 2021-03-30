@@ -11,7 +11,7 @@ export default function home1() {
       <hr />
       <div class="container">
         <div class="row">
-          <div class="column-66">
+          <div class="col-md-8">
             <div>
               <h1>Best Hotels in Jaipur</h1> 
               <p>
@@ -22,7 +22,7 @@ export default function home1() {
               <Button variant="primary">Explore More</Button>{" "}
             </div>
           </div>
-          <div class="column-33">
+          <div class="col-md-4">
           <img src={Hotel1} alt="Hotel1" class="img1" />
             {/* <img className="img1" src="./img/Hotel1.jpg"></img> */}
           </div>
@@ -31,11 +31,11 @@ export default function home1() {
       <hr />
       <div class="container">
         <div class="row">
-          <div class="column-33">
+          <div class="col-md-4">
           <img src={Tree} alt="Tree" class="img1" />
             {/* <img className="img1" src="./img/Tree.jpg"></img> */}
           </div>
-          <div class="column-66">
+          <div class="col-md-8">
             <h1>Glamping at Tree Resorts</h1>
             <p>
               The tree resorts available in Jaipur are way too cool to be
