@@ -1,7 +1,6 @@
 import React from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
-
 function Footer() {
   return (
     <div class="footer">
@@ -12,15 +11,24 @@ function Footer() {
                 <div class="first">
                     <h4>Tourist Escort</h4>
                     <ul>
+                    
+                        
+                     
                         <li>Discover a city with guide</li>
                         <li>Creating unique experiences</li>
+                       
                         <li>We work with exceptional guides  </li>
-                        <a href="https://github.com" target="_blank"> <i class="fab fa-github fa-2x margin"></i></a>
-                        <a href="https://twitter.com" target="_blank"> <i class="fab fa-twitter fa-2x margin"></i></a>
-                    <a href="https://www.linkedin.com" target="_blank"> <i class="fab fa-linkedin fa-2x margin"></i></a>
+                      <li> 
+                     
+                      <a href="https://github.com" target="blank"> <i class="fab fa-github fa-2x margin"></i></a>
+                   
+                      <a href="https://twitter.com" target="blank"> <i class="fab fa-twitter fa-2x margin"></i></a>
+                     
+                    <a href="https://linkedin.com" target="blank"> <i class="fab fa-linkedin fa-2x margin"></i></a>
+                 
+                       </li>
                     </ul>
                   
-                   
                   
                 </div>
             </div>
@@ -29,12 +37,12 @@ function Footer() {
                 <div class="second">
                     <h4> Navigate</h4>
                     <ul>
-                        <li><a href="Home">Home</a></li>
-                        <li><a href="Hotel">Hotel</a></li>
-                        <li><a href="Guide"> Guide</a></li>
+                        <li><Link to="/Home">Home</Link></li>
+                        <li><Link to="Hotel">Hotel</Link></li>
+                        <li><Link to="Guide"> Guide</Link></li>
                        
-                        <li><a href="About ">About</a></li>
-                        <li><a href="Contact">Contact</a></li>
+                        <li><Link to="About ">About</Link></li>
+                        <li><Link to ="Contact">Contact</Link></li>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,131 @@
+
+
+ * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+} 
+
+.footer {
+    background:rgb(63, 56, 58);
+   
+    background-size: cover;
+    
+}
+
+
+
+.first {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(206,206,206);
+    text-align: center;
+}
+    
+
+    .first h4 {
+      
+        position: relative;       
+        font-size: 1.6em;
+        color: #fff;
+        /* padding-bottom: 0.5em; */
+    }
+
+ 
+        .first li {
+            list-style: none;
+            /* padding-bottom: 15px; */
+        }
+.second {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(206,206,206);
+    /* font-family: 'Poppins', sans-serif; */
+     text-align: center;
+} 
+
+
+.second h4 {
+    position: relative;       
+    font-size: 1.6em;
+    color: #fff;
+    
+}
+
+
+
+.second li {
+    
+    list-style: none;
+    /* padding-bottom: 30px; */
+}
+ .second a, .second2 a {
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+   
+    transition: 0.2s;
+} 
+
+    .second a:hover{
+       
+        transition: 0.2s;
+        text-shadow: 1px 1px 20px rgba(0,0,0,1);
+        text-decoration: none
+
+    }
+
+
+
+.third {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(206,206,206);
+    /* font-family: 'Poppins', sans-serif; */
+    text-align: center;
+}
+
+
+    .third h4 {
+        /* font-size: 20px; */
+        /* letter-spacing: 3px; */
+        position: relative;
+        margin-bottom: 20px;
+        font-size: 1.6em;
+        color: #fff;
+        /* padding-bottom: 0.5em; */
+    }
+    .copy{
+        color: #fff;
+       
+        text-align: center;
+    }
+
+
+
+    .third li {
+        list-style: none;
+      
+    }
+
+
+
+@media screen and (max-width:1000px) {
+    .first {
+        text-align: center;
+    }
+
+        .first h4::after {
+            left: 40%;
+        }
+}
+
+@media screen and (max-width:1000px) {
+    .third {
+        text-align: center;
+    }
+
+        .third h4::after {
+            left: 40% !important;
+        }
+}
